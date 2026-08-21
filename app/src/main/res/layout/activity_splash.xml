@@ -27,10 +27,11 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
+                <!-- Diperbaiki menggunakan @drawable/logo_smk -->
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/logo_sekolah" />
+                    android:src="@drawable/logo_smk" />
 
                 <TextView
                     android:layout_width="wrap_content"
