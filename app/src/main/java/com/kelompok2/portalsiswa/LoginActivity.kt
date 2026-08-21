@@ -24,14 +24,13 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val user = binding.etUsername.text.toString().trim()
             val pass = binding.etPassword.text.toString().trim()
-            val lvl = binding.spLevel.selectedItem.toString()
 
             if (user.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Isi username dan password!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            ApiService.create().login(user, pass, lvl).enqueue(object : Callback<AuthResponse> {
+            ApiService.create().login(user, pass).enqueue(object : Callback<AuthResponse> {
                 override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
                     if (response.isSuccessful) {
                         Toast.makeText(this@LoginActivity, "Login Berhasil!", Toast.LENGTH_SHORT).show()
