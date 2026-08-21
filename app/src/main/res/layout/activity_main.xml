@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.kelompok2.portalsiswa.ParticleView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/title_biodata"
+            android:textColor="@color/text_white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GlassCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Anggota 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgMember1"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/foto_anggota1" />
+
+                    <Button
+                        android:id="@+id/btnDetail1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/gold_primary"
+                        android:text="@string/btn_detail"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Anggota 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgMember2"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/foto_anggota2" />
+
+                    <Button
+                        android:id="@+id/btnDetail2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/gold_primary"
+                        android:text="@string/btn_detail"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Anggota 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgMember3"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/foto_anggota3" />
+
+                    <Button
+                        android:id="@+id/btnDetail3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/gold_primary"
+                        android:text="@string/btn_detail"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Portal Data Siswa</string>
+    <string name="title_portal">Selamat Datang di\nPortal Data Siswa</string>
+    <string name="desc_portal">Aplikasi resmi untuk melihat profil dan biodata tim pengembang SMK Informatika Sumedang. Jelajahi profil tim kami sekarang.</string>
+    <string name="title_biodata">Biodata Kami</string>
+    <string name="created_by">Created by Kelompok 2</string>
+    
+    <!-- Button Texts -->
+    <string name="btn_masuk_sekarang">MASUK SEKARANG</string>
+    <string name="btn_masuk">MASUK</string>
+    <string name="btn_daftar">DAFTAR</string>
+    <string name="btn_batal">BATAL</string>
+    <string name="btn_detail">DETAIL</string>
+    <string name="btn_tutup">TUTUP BIODATA</string>
+    
+    <!-- API URL -->
+    <string name="base_url">https://login-api-production-a877.up.railway.app/</string>
+</resources>

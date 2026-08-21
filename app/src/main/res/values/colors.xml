@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna Utama & Background -->
+    <color name="bg_dark">#05070B</color>
+    <color name="gold_primary">#FF9E00</color>
+    <color name="gold_accent">#FFB703</color>
+    
+    <!-- Biru Tua dengan Opacity 50% (Kode '80' di awal mewakili 50% Alpha) -->
+    <color name="glass_card_bg">#800D1B2A</color>
+    <color name="glass_card_bg_input">#A00A1118</color>
+
+    <!-- Warna Teks -->
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_muted">#B0BEC5</color>
+</resources>
