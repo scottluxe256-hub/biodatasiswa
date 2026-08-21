@@ -50,7 +50,7 @@
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/foto_anggota1"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
                     <Button
                         android:id="@+id/btnDetail1"
@@ -78,7 +78,7 @@
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/foto_anggota2"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
                     <Button
                         android:id="@+id/btnDetail2"
@@ -106,7 +106,7 @@
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/foto_anggota3"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
                     <Button
                         android:id="@+id/btnDetail3"

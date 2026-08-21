@@ -12,7 +12,6 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- Judul Dialog -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +21,6 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
-        <!-- Foto Profil Bulat Gede -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgDetailFoto"
             android:layout_width="120dp"
@@ -31,9 +29,8 @@
             android:layout_marginVertical="16dp"
             android:scaleType="centerCrop"
             android:src="@drawable/foto_anggota1"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
-        <!-- Card Khusus Isi Biodata (Background Opacity ~80%) -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,7 +97,6 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Tombol Tutup -->
         <Button
             android:id="@+id/btnTutup"
             android:layout_width="match_parent"
