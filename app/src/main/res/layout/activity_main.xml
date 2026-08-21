@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- Tombol Logout -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -61,16 +60,23 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/imgMember1"
+                    <!-- Pembungkus foto dengan outline emas sempurna -->
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:elevation="6dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/foto_anggota1"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="6dp"
                         app:strokeColor="@color/gold_primary"
-                        app:strokeWidth="2dp" />
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:id="@+id/imgMember1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/foto_anggota1" />
+                    </com.google.android.material.card.MaterialCardView>
 
                     <Button
                         android:id="@+id/btnDetail1"
@@ -92,16 +98,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/imgMember2"
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:elevation="6dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/foto_anggota2"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="6dp"
                         app:strokeColor="@color/gold_primary"
-                        app:strokeWidth="2dp" />
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:id="@+id/imgMember2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/foto_anggota2" />
+                    </com.google.android.material.card.MaterialCardView>
 
                     <Button
                         android:id="@+id/btnDetail2"
@@ -123,16 +135,22 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/imgMember3"
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:elevation="6dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/foto_anggota3"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="6dp"
                         app:strokeColor="@color/gold_primary"
-                        app:strokeWidth="2dp" />
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:id="@+id/imgMember3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/foto_anggota3" />
+                    </com.google.android.material.card.MaterialCardView>
 
                     <Button
                         android:id="@+id/btnDetail3"
@@ -145,6 +163,7 @@
                         android:textSize="12sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
