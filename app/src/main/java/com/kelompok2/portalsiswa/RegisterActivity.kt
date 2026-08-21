@@ -28,9 +28,12 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            ApiService.create().register(user, email, pass).enqueue(object : Callback<AuthResponse> {
+            // Buat request body JSON
+            val request = RegisterRequest(username = user, email = email, password = pass)
+
+            ApiService.create().register(request).enqueue(object : Callback<AuthResponse> {
                 override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                    if (response.isSuccessful) {
+                    if (response.isSuccessful && response.body() != null) {
                         Toast.makeText(this@RegisterActivity, "Berhasil Daftar!", Toast.LENGTH_SHORT).show()
                         finish()
                     } else {

@@ -2,7 +2,6 @@ package com.kelompok2.portalsiswa
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.kelompok2.portalsiswa.databinding.ActivityLoginBinding
@@ -18,9 +17,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val levels = arrayOf("Admin (Full Control)", "User (Read Only)")
-        binding.spLevel.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, levels)
-
         binding.btnLogin.setOnClickListener {
             val user = binding.etUsername.text.toString().trim()
             val pass = binding.etPassword.text.toString().trim()
@@ -30,9 +26,12 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            ApiService.create().login(user, pass).enqueue(object : Callback<AuthResponse> {
+            // Mengirim request JSON
+            val request = LoginRequest(username = user, password = pass)
+
+            ApiService.create().login(request).enqueue(object : Callback<AuthResponse> {
                 override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                    if (response.isSuccessful) {
+                    if (response.isSuccessful && response.body() != null) {
                         Toast.makeText(this@LoginActivity, "Login Berhasil!", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         finish()
