@@ -27,12 +27,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Fitur Logout Kembali ke Login/Beranda
+        // Fitur Logout
         binding.btnLogout.setOnClickListener {
             Toast.makeText(this, "Berhasil Logout", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, LoginActivity::class.java)
-            // Membersihkan tumpukan activity agar pengguna tidak bisa klik 'Back' untuk kembali
-            intent.flags = IntentActivity.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            // Diperbaiki: Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }
