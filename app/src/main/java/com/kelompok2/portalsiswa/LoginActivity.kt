@@ -17,9 +17,11 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Aksi Tombol Back di Layout
+        // Klik Tombol Kembali ke Splash
         binding.btnBack.setOnClickListener {
-            navigateToSplash()
+            val intent = Intent(this@LoginActivity, SplashActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         binding.btnLogin.setOnClickListener {
@@ -53,18 +55,5 @@ class LoginActivity : AppCompatActivity() {
         binding.tvToRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
-    }
-
-    // Menangani tombol back fisik bawaan HP
-    override fun onBackPressed() {
-        super.onBackPressed()
-        navigateToSplash()
-    }
-
-    private fun navigateToSplash() {
-        val intent = Intent(this, SplashActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
-        finish()
     }
 }
