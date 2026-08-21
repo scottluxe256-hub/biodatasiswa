@@ -1,6 +1,7 @@
 package com.kelompok2.portalsiswa
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.kelompok2.portalsiswa.databinding.ActivityMainBinding
 
@@ -25,6 +27,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Fitur Logout Kembali ke Login/Beranda
+        binding.btnLogout.setOnClickListener {
+            Toast.makeText(this, "Berhasil Logout", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            // Membersihkan tumpukan activity agar pengguna tidak bisa klik 'Back' untuk kembali
+            intent.flags = IntentActivity.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
+
         binding.btnDetail1.setOnClickListener { showDetailDialog(dataSiswa[0]) }
         binding.btnDetail2.setOnClickListener { showDetailDialog(dataSiswa[1]) }
         binding.btnDetail3.setOnClickListener { showDetailDialog(dataSiswa[2]) }
@@ -35,7 +47,6 @@ class MainActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.dialog_detail)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        // Mengatur lebar dialog agar 90% lebar layar (proporsional 4:5)
         dialog.window?.setLayout(
             (resources.displayMetrics.widthPixels * 0.90).toInt(),
             ViewGroup.LayoutParams.WRAP_CONTENT
