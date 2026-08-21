@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- Tombol Logout di Pojok Kiri Atas -->
+    <!-- Tombol Logout -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -65,9 +65,12 @@
                         android:id="@+id/imgMember1"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:elevation="6dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/foto_anggota1"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                        app:strokeColor="@color/gold_primary"
+                        app:strokeWidth="2dp" />
 
                     <Button
                         android:id="@+id/btnDetail1"
@@ -93,9 +96,12 @@
                         android:id="@+id/imgMember2"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:elevation="6dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/foto_anggota2"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                        app:strokeColor="@color/gold_primary"
+                        app:strokeWidth="2dp" />
 
                     <Button
                         android:id="@+id/btnDetail2"
@@ -121,9 +127,12 @@
                         android:id="@+id/imgMember3"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:elevation="6dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/foto_anggota3"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                        app:strokeColor="@color/gold_primary"
+                        app:strokeWidth="2dp" />
 
                     <Button
                         android:id="@+id/btnDetail3"

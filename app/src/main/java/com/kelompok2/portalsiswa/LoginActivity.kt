@@ -17,9 +17,12 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Tombol Kembali ke Halaman Selamat Datang
+        // Diperbaiki: Navigasi langsung ke SplashActivity
         binding.btnBack.setOnClickListener {
-            finish() // Menutup halaman login & balik ke halaman sebelumnya (Selamat Datang)
+            val intent = Intent(this, SplashActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+            finish()
         }
 
         binding.btnLogin.setOnClickListener {
@@ -31,7 +34,6 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Mengirim request JSON
             val request = LoginRequest(username = user, password = pass)
 
             ApiService.create().login(request).enqueue(object : Callback<AuthResponse> {

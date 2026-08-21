@@ -8,63 +8,77 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:paddingHorizontal="24dp">
 
+        <!-- Card Utama -->
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSplash"
             style="@style/GlassCardStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:paddingHorizontal="24dp"
+                android:paddingTop="60dp"
+                android:paddingBottom="28dp">
 
-                <!-- Diperbaiki menggunakan @drawable/logo_smk -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/logo_smk" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Selamat Datang di\nPortal Data Siswa"
+                    android:textColor="@color/text_white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:gravity="center"
-                    android:text="Selamat Datang di\nPortal Data Siswa"
-                    android:textColor="@color/text_white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
                     android:text="Aplikasi resmi untuk melihat profil dan biodata tim pengembang SMK Informatika Sumedang oleh Kelompok 2. Jelajahi profil tim kami sekarang."
                     android:textColor="@color/text_white"
-                    android:textSize="13sp" />
+                    android:textSize="14sp" />
 
                 <Button
                     android:id="@+id/btnMasukSekarang"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="24dp"
                     android:backgroundTint="@color/gold_primary"
                     android:text="MASUK SEKARANG"
                     android:textColor="#000000"
+                    android:textSize="14sp"
                     android:textStyle="bold"
-                    app:cornerRadius="10dp" />
+                    app:cornerRadius="12dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
+
+        <!-- Logo SMK Mengambang Tepat di Line/Outline Atas Card -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgLogoSmk"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_smk"
+            app:strokeColor="@color/gold_primary"
+            app:strokeWidth="2dp" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tvCreatedBy"

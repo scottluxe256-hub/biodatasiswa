@@ -21,15 +21,19 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
+        <!-- Foto Detail dengan Outline Emas -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgDetailFoto"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginVertical="16dp"
+            android:elevation="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/foto_anggota1"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            app:strokeColor="@color/gold_primary"
+            app:strokeWidth="3dp" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
