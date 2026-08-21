@@ -30,7 +30,7 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:paddingHorizontal="24dp"
-                android:paddingTop="60dp"
+                android:paddingTop="65dp"
                 android:paddingBottom="28dp">
 
                 <TextView
@@ -66,17 +66,15 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Logo SMK Mengambang Tepat di Line/Outline Atas Card -->
-        <com.google.android.material.imageview.ShapeableImageView
+        <!-- Logo SMK yang memotong garis outline atas card -->
+        <ImageView
             android:id="@+id/imgLogoSmk"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:elevation="12dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/logo_smk"
-            app:strokeColor="@color/gold_primary"
-            app:strokeWidth="2dp" />
+            android:src="@drawable/logo_smk" />
 
     </RelativeLayout>
 
