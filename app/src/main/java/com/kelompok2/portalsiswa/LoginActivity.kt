@@ -17,6 +17,11 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Tombol Kembali ke Halaman Selamat Datang
+        binding.btnBack.setOnClickListener {
+            finish() // Menutup halaman login & balik ke halaman sebelumnya (Selamat Datang)
+        }
+
         binding.btnLogin.setOnClickListener {
             val user = binding.etUsername.text.toString().trim()
             val pass = binding.etPassword.text.toString().trim()

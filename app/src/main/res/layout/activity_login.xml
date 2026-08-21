@@ -8,6 +8,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <!-- Tombol Kembali di Pojok Kiri Atas Halaman Login -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="12dp"
+        android:text="← Kembali"
+        android:textColor="@color/gold_primary"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:strokeColor="@color/gold_primary"
+        app:strokeWidth="1dp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

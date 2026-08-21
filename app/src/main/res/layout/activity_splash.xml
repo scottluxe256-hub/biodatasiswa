@@ -13,13 +13,12 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
 
         <com.google.android.material.card.MaterialCardView
             style="@style/GlassCardStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,22 +27,19 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
-                <!-- Logo SMK -->
                 <ImageView
-                    android:id="@+id/imgLogoSmk"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginBottom="16dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/logo_smk" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/logo_sekolah" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
-                    android:text="@string/title_portal"
+                    android:text="Selamat Datang di\nPortal Data Siswa"
                     android:textColor="@color/text_white"
-                    android:textSize="22sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -51,20 +47,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:gravity="center"
-                    android:text="@string/desc_portal"
-                    android:textColor="@color/text_muted"
-                    android:textSize="14sp" />
+                    android:text="Aplikasi resmi untuk melihat profil dan biodata tim pengembang SMK Informatika Sumedang oleh Kelompok 2. Jelajahi profil tim kami sekarang."
+                    android:textColor="@color/text_white"
+                    android:textSize="13sp" />
 
                 <Button
                     android:id="@+id/btnMasukSekarang"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="20dp"
                     android:backgroundTint="@color/gold_primary"
-                    android:text="@string/btn_masuk_sekarang"
+                    android:text="MASUK SEKARANG"
                     android:textColor="#000000"
                     android:textStyle="bold"
-                    app:cornerRadius="12dp" />
+                    app:cornerRadius="10dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
@@ -75,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="24dp"
-        android:text="@string/created_by"
-        android:textColor="@color/text_muted"
-        android:textSize="14sp" />
+        android:text="Created by Kelompok 2"
+        android:textColor="@color/text_white"
+        android:textSize="12sp" />
 </FrameLayout>
