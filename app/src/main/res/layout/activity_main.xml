@@ -18,10 +18,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/title_biodata"
             android:textColor="@color/text_white"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <!-- Anggota 1 -->
                 <LinearLayout
@@ -44,22 +44,24 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/imgMember1"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/foto_anggota1" />
+                        android:src="@drawable/foto_anggota1"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
 
                     <Button
                         android:id="@+id/btnDetail1"
                         android:layout_width="wrap_content"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
                         android:backgroundTint="@color/gold_primary"
                         android:text="@string/btn_detail"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- Anggota 2 -->
@@ -70,22 +72,24 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/imgMember2"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/foto_anggota2" />
+                        android:src="@drawable/foto_anggota2"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
 
                     <Button
                         android:id="@+id/btnDetail2"
                         android:layout_width="wrap_content"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
                         android:backgroundTint="@color/gold_primary"
                         android:text="@string/btn_detail"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- Anggota 3 -->
@@ -96,22 +100,24 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/imgMember3"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/foto_anggota3" />
+                        android:src="@drawable/foto_anggota3"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
 
                     <Button
                         android:id="@+id/btnDetail3"
                         android:layout_width="wrap_content"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
                         android:backgroundTint="@color/gold_primary"
                         android:text="@string/btn_detail"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

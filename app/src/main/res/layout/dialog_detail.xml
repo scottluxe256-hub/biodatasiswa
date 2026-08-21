@@ -4,87 +4,112 @@
     style="@style/GlassCardStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp">
+    android:layout_margin="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="24dp">
 
+        <!-- Judul Dialog -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Biodata Diri Siswa"
             android:textColor="@color/text_white"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
-        <ImageView
+        <!-- Foto Profil Bulat Gede -->
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgDetailFoto"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
-            android:layout_marginVertical="12dp"
+            android:layout_marginVertical="16dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/foto_anggota1" />
+            android:src="@drawable/foto_anggota1"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Users.Circle" />
 
-        <TextView
-            android:id="@+id/tvNis"
-            android:layout_width="wrap_content"
+        <!-- Card Khusus Isi Biodata (Background Opacity ~80%) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/gold_primary"
-            android:textSize="14sp" />
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#CC0F172A"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/gold_primary"
+            app:strokeWidth="1dp">
 
-        <TextView
-            android:id="@+id/tvNama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/text_white"
-            android:textSize="14sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
 
-        <TextView
-            android:id="@+id/tvTtl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/text_white"
-            android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tvNis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gold_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvAlamat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/text_white"
-            android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tvNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvHobi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/text_white"
-            android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tvTtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvCitaCita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/text_white"
-            android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tvAlamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp" />
 
+                <TextView
+                    android:id="@+id/tvHobi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvCitaCita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tombol Tutup -->
         <Button
             android:id="@+id/btnTutup"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="52dp"
             android:backgroundTint="@color/gold_primary"
             android:text="@string/btn_tutup"
             android:textColor="#000000"
-            android:textStyle="bold" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
