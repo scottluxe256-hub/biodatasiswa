@@ -1,4 +1,4 @@
-Name: Android CI Build APK
+name: Android CI Build APK
 
 on:
   push:
@@ -27,7 +27,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    # Ganti 'gradle' menjadi './gradlew' di sini:
     - name: Build Debug APK
       run: ./gradlew assembleDebug --stacktrace
 
