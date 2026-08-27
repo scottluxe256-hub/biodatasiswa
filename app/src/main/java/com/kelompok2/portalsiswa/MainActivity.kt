@@ -18,10 +18,9 @@ import com.bumptech.glide.Glide
 import com.kelompok2.portalsiswa.databinding.ActivityMainBinding
 import com.kelompok2.portalsiswa.databinding.DialogDetailBinding
 import com.kelompok2.portalsiswa.databinding.DialogFormSiswaBinding
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -335,7 +334,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun String.toTextRequestBody(): RequestBody {
-        return this.toRequestBody("text/plain".toMediaTypeOrNull())
+        val mediaType = MediaType.parse("text/plain")
+        return RequestBody.create(mediaType, this)
     }
 
     private fun getFileName(uri: Uri): String {
@@ -368,7 +368,8 @@ class MainActivity : AppCompatActivity() {
             inputStream.close()
             val mimeType = contentResolver.getType(fileUri) ?: "image/*"
             val fileName = getFileName(fileUri)
-            val requestFile = bytes.toRequestBody(mimeType.toMediaTypeOrNull())
+            val mediaType = MediaType.parse(mimeType)
+            val requestFile = RequestBody.create(mediaType, bytes)
             MultipartBody.Part.createFormData(partName, fileName, requestFile)
         } catch (e: Exception) {
             e.printStackTrace()
